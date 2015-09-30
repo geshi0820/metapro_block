@@ -15,7 +15,7 @@ class CallEvent
   end
 
   def notify
-    print "event: #{@title}\n on: #{@date}\n at: #{@at}\n\n"
+    print "#{@title}に招待されました。\n 日程: #{@date}\n 場所: #{@at}\n\n"
   end
 end
 
@@ -27,6 +27,6 @@ def event(title, &block)
 end
 
 
-Dir.glob("/Users/Shige/event_dsl/**event.rb").each{ |file|
+Dir.glob("/Users/Shige/event_dsl/**event.txt").each{ |file|
   load file
 }
