@@ -6,7 +6,6 @@ Hoge = Class.new do
    end
 end
 
-
 obj = Hoge.new
 obj.fuga
 # => "success"

@@ -1,12 +1,12 @@
-aaa = hoge{ p "私はブロックではありません、プロックです。"}
 
 # このメソッドを作成せよ
-def hoge
-  &block
+def block_to_proc(&block)
+  block
 end
 
-p hoge.class
+obj = block_to_proc { "私はブロックではありません、プロックです。"}
+p obj.class
 # => Proc
 
-p hoge.call
+p obj.call
 # => "私はブロックではありません、プロックです。"
